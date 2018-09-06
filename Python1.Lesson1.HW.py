@@ -88,15 +88,13 @@ mSurname = input('Введите свою Фамилию:')
 mAge = int(input('Введите свой возраст:'))
 mWeight = int(input('Введите свой вес:'))
 
-status = 0
-
 if mAge < 30 and 50 < mWeight < 120:
     status = 'хорошее состояние'
-elif mAge >= 30 and 50 > mWeight > 120:
+elif mAge <= 30 and mWeight < 50 or mWeight > 120:
     status = 'следует заняться собой'
-elif mAge > 40 and 50 > mWeight > 120:
+elif mAge > 40 and mWeight < 50 or mWeight > 120:
     status = 'следует обратится к врачу!'
-# else:
-#     status = 'еще поживете'
+else:
+    status = 'еще поживете'
 
 print(mName, mSurname + ',', mAge, 'год,', 'вес', mWeight, '-', status)

@@ -28,7 +28,13 @@ for i in range(1, 10):
 # Задача-2:
 # Напишите скрипт, отображающий папки текущей директории.
 def show_this_dir_files():
-    print(os.listdir())
+    files = os.listdir()
+    dir_only = []
+    for f in files:
+        if os.path.isdir(f):
+            dir_only.append(f)
+
+    print(dir_only)
 
 
 # Задача-3:
